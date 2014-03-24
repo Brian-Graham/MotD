@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.TheJeterLP.Bukkit</groupId>
+    <artifactId>MotD</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>MotD</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+  
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+        <finalName>${project.name}</finalName>
+        <sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <optimize>true</optimize>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>                       
+        </plugins>
+        <resources>
+            <resource>
+                <targetPath>.</targetPath>
+                <filtering>true</filtering>
+                <directory>${basedir}/src/main/resources/</directory>
+                <includes>                   
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+    <dependencies> 
+        <dependency>            
+            <groupId>net.md5</groupId>
+            <artifactId>Bungeecord</artifactId>
+            <version>1.0.0</version>
+        </dependency> 
+        <dependency>            
+            <groupId>de.TheJeterLP.Bukkit</groupId>
+            <artifactId>JeterConfig</artifactId>
+            <version>1.0.0</version>
+        </dependency> 
+    </dependencies>
+
+  
+</project>

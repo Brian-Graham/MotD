@@ -1,0 +1,7 @@
+name: MotD
+version: 1.0.0
+author: TheJeterLP
+
+main: de.TheJeterLP.Bukkit.MotD.Main
+
+depends: [JeterConfig]
